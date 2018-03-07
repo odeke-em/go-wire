@@ -11,7 +11,7 @@ featureset and a common binary encoding protocol.
 developed in Go.  But Wire is not just for Go.  If you'd like to
 contribute by creating supporting libraries in various languages from scratch
 or by adapting existing Protobuf3 libraries, please contact us via the
-[Github issue system](https://github.com/tendermint/go-wire))
+[Github issue system](https://github.com/tendermint/go-wire/issues))
 
 
 # Why Wire?
