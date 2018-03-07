@@ -92,11 +92,11 @@ wire.RegisterConcrete(&MyStruct3{}, "anythingcangoinhereifitsunique", nil)
 
 Notice that an interface is represented by a nil pointer of that interface.
 
-Structs that must be deserialized as pointer values must be registered with
-a pointer value as well.  It's OK to serialize such structures in
-non-pointer (value) form, but when deserializing such structures into an
-interface field, they will always be deserialized as pointers.
-
+Wire tries to transparently deal with pointers (and pointer-pointers) when it can.
+When it comes to decoding a concrete type into an interface value, Go gives
+the user the option to register the concrete type as a pointer or non-pointer.
+If and only if the value is registered as a pointer the decoded value will be a pointer as well.
+...
 
 ### Prefix bytes to identify the concrete type
 
